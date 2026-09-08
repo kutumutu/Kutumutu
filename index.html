@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kutumutu - কুটুমুটু | Kids Books & Toys</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff9fc;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e85b91;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+}
+
+.menu {
+    font-size: 25px;
+    color: #e85b91;
+}
+
+.hero {
+    padding: 55px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe5f0, #fff5d9);
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #e64f89;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    max-width: 550px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 27px;
+    background: #e85b91;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 40px 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.category {
+    background: white;
+    padding: 25px 12px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.category .icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.category h3 {
+    font-size: 16px;
+    color: #555;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.product {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.product-img {
+    height: 160px;
+    background: #f7eaf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.product-info {
+    padding: 14px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #e64f89;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-btn {
+    display: block;
+    margin-top: 10px;
+    background: #e85b91;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.offer {
+    margin: 10px 18px 35px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #fff0b8;
+    border-radius: 22px;
+}
+
+.offer h2 {
+    color: #d66b00;
+    margin-bottom: 8px;
+}
+
+.offer p {
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    color: #ff8db5;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+@media (min-width: 700px) {
+
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        কুটুমুটু
+        <span>Kutumutu</span>
+    </div>
+
+    <div class="menu">☰</div>
+</header>
+
+
+<section class="hero">
+
+    <h1>কুটুমুটু 💗</h1>
+
+    <h2>Little Things, Big Smiles!</h2>
+
+    <p>
+        শিশুদের জন্য সুন্দর, শিক্ষামূলক ও আনন্দদায়ক
+        বই এবং খেলনার একটি ভালোবাসার জায়গা।
+    </p>
+
+    <a href="#products" class="btn">
+        🛍️ Shop Now
+    </a>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        আমাদের ক্যাটাগরি
+    </h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <div class="icon">📚</div>
+            <h3>Story Books</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">🎨</div>
+            <h3>Activity Books</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">🕌</div>
+            <h3>Islamic Books</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">🧸</div>
+            <h3>Toys</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="offer">
+
+    <h2>🎁 Special Offer!</h2>
+
+    <p>
+        আপনার ছোট্ট সোনামণির জন্য পছন্দের
+        বই ও খেলনা কিনুন কুটুমুটু থেকে।
+    </p>
+
+</section>
+
+
+<section class="section" id="products">
+
+    <h2 class="section-title">
+        জনপ্রিয় পণ্য
+    </h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-img">
+                📖
+            </div>
+
+            <div class="product-info">
+
+                <h3>Kids Story Book</h3>
+
+                <div class="price">
+                    ৳250
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🎨
+            </div>
+
+            <div class="product-info">
+
+                <h3>Activity Book</h3>
+
+                <div class="price">
+                    ৳180
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🕌
+            </div>
+
+            <div class="product-info">
+
+                <h3>Islamic Story Book</h3>
+
+                <div class="price">
+                    ৳220
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🧸
+            </div>
+
+            <div class="product-info">
+
+                <h3>Educational Toy</h3>
+
+                <div class="price">
+                    ৳350
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        কেন কুটুমুটু?
+    </h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <div class="icon">❤️</div>
+            <h3>ভালোবাসা দিয়ে বাছাই</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">🌟</div>
+            <h3>শিশুবান্ধব পণ্য</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">📦</div>
+            <h3>সারা দেশে ডেলিভারি</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">😊</div>
+            <h3>Happy Shopping</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>কুটুমুটু</h2>
+
+    <p>
+        শিশুদের জন্য বই, খেলনা ও আনন্দের জগৎ।
+    </p>
+
+    <div class="social">
+
+        <a href="#">Facebook</a> |
+        <a href="#">Messenger</a>
+
+    </div>
+
+    <p style="margin-top:18px;">
+        © 2026 Kutumutu. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
