@@ -693,15 +693,14 @@ footer p{
 
         <div class="product">
 
-            <div class="product-img">
-                <div class="product-emoji">📚</div>
-            </div>
+            <div class="product-img" onclick="showProduct('কচিকাঁচার গপ্পো',790,'১০ পিসের সেট','1787677139407.jpg')">
+    <img src="1787677139407.jpg" alt="কচিকাঁচার গপ্পো">
+</div>
 
             <div class="product-info">
 
                 <h3 class="product-name"
-                    onclick="showProduct('কচিকাঁচার গপ্পো',790,'১০ পিসের সেট','📚')">
-                    কচিকাঁচার গপ্পো
+                    onclick="showProduct('কচিকাঁচার গপ্পো',790,'১০ পিসের সেট','1787677139407.jpg')"
                 </h3>
 
                 <div class="details">১০ পিসের সেট</div>
@@ -730,16 +729,11 @@ footer p{
 
         <div class="product">
 
-            <div class="product-img">
-                <div class="product-emoji">✍️</div>
-            </div>
+               <div class="product-img" onclick="showProduct('Magic Handwriting Set',640,'৬ পিস','file_0000000034f481f789f80ca79f50a80c.png')">
+    <img src="file_0000000034f481f789f80ca79f50a80c.png" alt="Magic Handwriting Set">
+</div>         <div class="product-info">
 
-            <div class="product-info">
-
-                <h3 class="product-name"
-                    onclick="showProduct('Magic Handwriting Set',640,'৬ পিস','✍️')">
-                    Magic Handwriting Set
-                </h3>
+            <h3 class="product-name" onclick="showProduct('Magic Handwriting Set',640,'৬ পিস','file_0000000034f481f789f80ca79f50a80c.png')">Magic Handwriting Set</h3>
 
                 <div class="details">৬ পিস</div>
 
@@ -767,16 +761,13 @@ footer p{
 
         <div class="product">
 
-            <div class="product-img">
-                <div class="product-emoji">🧠</div>
-            </div>
+            <div class="product-img" onclick="showProduct('জ্ঞানবক্স',590,'১২ পিসের সেট','InShot_20260901_211105616.jpg')">
+    <img src="InShot_20260901_211105616.jpg" alt="জ্ঞানবক্স">
+</div>
 
             <div class="product-info">
 
-                <h3 class="product-name"
-                    onclick="showProduct('জ্ঞানবক্স',590,'১২ পিসের সেট','🧠')">
-                    জ্ঞানবক্স
-                </h3>
+                <h3 class="product-name" onclick="showProduct('জ্ঞানবক্স',590,'১২ পিসের সেট','InShot_20260901_211105616.jpg')">জ্ঞানবক্স</h3>
 
                 <div class="details">১২ পিসের সেট</div>
 
@@ -1470,7 +1461,7 @@ let detailProduct = "";
 let detailProductPrice = 0;
 
 
-function showProduct(name,price,description,emoji){
+function showProduct(name,price,description,image){
 
     detailProduct = name;
 
@@ -1488,7 +1479,7 @@ function showProduct(name,price,description,emoji){
 
 
     document.getElementById("detailImage").innerHTML =
-        '<div class="detail-emoji">' + emoji + '</div>';
+    '<img src="' + image + '" alt="' + name + '">';
 
 
     document.getElementById("productModal").style.display =
