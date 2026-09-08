@@ -179,6 +179,7 @@ header {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .offer {
@@ -223,6 +224,83 @@ header {
     font-weight: bold;
 }
 
+/* ORDER FORM */
+
+.order-box {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.order-form {
+    background: white;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 22px;
+}
+
+.order-form h2 {
+    text-align: center;
+    color: #e64f89;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    color: #777;
+}
+
+.order-form label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.order-form input,
+.order-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.order-summary {
+    background: #fff5f8;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 18px;
+    line-height: 1.9;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e64f89;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    border: none;
+    margin-top: 18px;
+    padding: 13px;
+    border-radius: 25px;
+    background: #25D366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 footer {
     background: #333;
     color: white;
@@ -240,16 +318,6 @@ footer p {
     color: #ddd;
     font-size: 14px;
     line-height: 1.7;
-}
-
-.social {
-    margin-top: 15px;
-}
-
-.social a {
-    color: white;
-    text-decoration: none;
-    margin: 5px;
 }
 
 @media (min-width: 700px) {
@@ -276,16 +344,13 @@ footer p {
 <body>
 
 <header>
-
     <div class="logo">
         কুটুমুটু
         <span>Kutumutu</span>
     </div>
 
     <div class="menu">☰</div>
-
 </header>
-
 
 <section class="hero">
 
@@ -303,7 +368,6 @@ footer p {
     </a>
 
 </section>
-
 
 <section class="section">
 
@@ -337,7 +401,6 @@ footer p {
 
 </section>
 
-
 <section class="offer">
 
     <h2>🎁 Special Offer!</h2>
@@ -349,7 +412,6 @@ footer p {
 
 </section>
 
-
 <section class="section" id="products">
 
     <h2 class="section-title">
@@ -358,301 +420,129 @@ footer p {
 
     <div class="products">
 
-
-        <!-- Product 1 -->
-
         <div class="product">
-
-            <div class="product-img">
-                📚
-            </div>
-
+            <div class="product-img">📚</div>
             <div class="product-info">
-
                 <h3>কচিকাঁচার গপ্পো</h3>
-
-                <div class="details">
-                    ১০ পিসের সেট
-                </div>
-
-                <div class="price">
-                    ৳৭৯০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">১০ পিসের সেট</div>
+                <div class="price">৳৭৯০</div>
+                <a class="order-btn" onclick="openOrder('কচিকাঁচার গপ্পো',790)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 2 -->
-
         <div class="product">
-
-            <div class="product-img">
-                ✍️
-            </div>
-
+            <div class="product-img">✍️</div>
             <div class="product-info">
-
                 <h3>Magic Handwriting Set</h3>
-
-                <div class="details">
-                    ৬ পিস
-                </div>
-
-                <div class="price">
-                    ৳৬৪০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">৬ পিস</div>
+                <div class="price">৳৬৪০</div>
+                <a class="order-btn" onclick="openOrder('Magic Handwriting Set',640)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 3 -->
-
         <div class="product">
-
-            <div class="product-img">
-                🧠
-            </div>
-
+            <div class="product-img">🧠</div>
             <div class="product-info">
-
                 <h3>জ্ঞানবক্স</h3>
-
-                <div class="details">
-                    ১২ পিসের সেট
-                </div>
-
-                <div class="price">
-                    ৳৫৯০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">১২ পিসের সেট</div>
+                <div class="price">৳৫৯০</div>
+                <a class="order-btn" onclick="openOrder('জ্ঞানবক্স',590)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 4 -->
-
         <div class="product">
-
-            <div class="product-img">
-                🔤
-            </div>
-
+            <div class="product-img">🔤</div>
             <div class="product-info">
-
                 <h3>Words with Pictures</h3>
-
-                <div class="details">
-                    ৩০০+
-                </div>
-
-                <div class="price">
-                    ৳১৪০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">৩০০+</div>
+                <div class="price">৳১৪০</div>
+                <a class="order-btn" onclick="openOrder('Words with Pictures',140)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 5 -->
-
         <div class="product">
-
-            <div class="product-img">
-                🧽
-            </div>
-
+            <div class="product-img">🧽</div>
             <div class="product-info">
-
                 <h3>Cute Eraser Set</h3>
-
-                <div class="details">
-                    ৪ পিস
-                </div>
-
-                <div class="price">
-                    ৳৮৫
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">৪ পিস</div>
+                <div class="price">৳৮৫</div>
+                <a class="order-btn" onclick="openOrder('Cute Eraser Set - 4 pcs',85)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 6 -->
-
         <div class="product">
-
-            <div class="product-img">
-                🧽
-            </div>
-
+            <div class="product-img">🧽</div>
             <div class="product-info">
-
                 <h3>Cute Eraser Set</h3>
-
-                <div class="details">
-                    ৬ পিস
-                </div>
-
-                <div class="price">
-                    ৳৯০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">৬ পিস</div>
+                <div class="price">৳৯০</div>
+                <a class="order-btn" onclick="openOrder('Cute Eraser Set - 6 pcs',90)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 7 -->
-
         <div class="product">
-
-            <div class="product-img">
-                ✏️
-            </div>
-
+            <div class="product-img">🚗</div>
             <div class="product-info">
-
                 <h3>Car-Shaped Sharpener</h3>
-
-                <div class="details">
-                    ১ পিস
-                </div>
-
-                <div class="price">
-                    ৳৯৯
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">১ পিস</div>
+                <div class="price">৳৯৯</div>
+                <a class="order-btn" onclick="openOrder('Car-Shaped Sharpener',99)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 8 -->
-
         <div class="product">
-
-            <div class="product-img">
-                ✂️
-            </div>
-
+            <div class="product-img">✂️</div>
             <div class="product-info">
-
                 <h3>Kids Safety Scissors</h3>
-
-                <div class="details">
-                    ১ পিস
-                </div>
-
-                <div class="price">
-                    ৳১৫০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">১ পিস</div>
+                <div class="price">৳১৫০</div>
+                <a class="order-btn" onclick="openOrder('Kids Safety Scissors',150)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Product 9 -->
-
         <div class="product">
-
-            <div class="product-img">
-                🖍️
-            </div>
-
+            <div class="product-img">🖍️</div>
             <div class="product-info">
-
                 <h3>Erasable Highlighter Set</h3>
-
-                <div class="details">
-                    ৬ পিস
-                </div>
-
-                <div class="price">
-                    ৳১৯০
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">৬ পিস</div>
+                <div class="price">৳১৯০</div>
+                <a class="order-btn" onclick="openOrder('Erasable Highlighter Set',190)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
-
-
-        <!-- Product 10 -->
 
         <div class="product">
-
-            <div class="product-img">
-                🔤
-            </div>
-
+            <div class="product-img">🔤</div>
             <div class="product-info">
-
                 <h3>Alphabet & Number Stickers</h3>
-
-                <div class="details">
-                    ১ পিস
-                </div>
-
-                <div class="price">
-                    ৳৩৫
-                </div>
-
-                <a href="#" class="order-btn">
+                <div class="details">১ পিস</div>
+                <div class="price">৳৩৫</div>
+                <a class="order-btn" onclick="openOrder('Alphabet & Number Stickers',35)">
                     Order Now
                 </a>
-
             </div>
-
         </div>
-
 
     </div>
 
 </section>
-
 
 <section class="section">
 
@@ -681,39 +571,79 @@ footer p {
 
 </section>
 
+<div class="order-box" id="orderBox">
 
-<section class="section">
+    <div class="order-form">
 
-    <h2 class="section-title">
-        কেন কুটুমুটু?
-    </h2>
+        <span class="close-btn" onclick="closeOrder()">×</span>
 
-    <div class="categories">
+        <h2>🛍️ অর্ডার করুন</h2>
 
-        <div class="category">
-            <div class="icon">❤️</div>
-            <h3>ভালোবাসা দিয়ে বাছাই</h3>
+        <label>পণ্য</label>
+        <input type="text" id="productName" readonly>
+
+        <label>পরিমাণ</label>
+        <input type="number" id="quantity" value="1" min="1"
+               onchange="calculateTotal()">
+
+        <label>আপনার নাম</label>
+        <input type="text" id="customerName"
+               placeholder="আপনার নাম লিখুন">
+
+        <label>মোবাইল নম্বর</label>
+        <input type="tel" id="phone"
+               placeholder="01XXXXXXXXX">
+
+        <label>ডেলিভারি এলাকা</label>
+
+        <select id="deliveryArea" onchange="calculateTotal()">
+
+            <option value="80">
+                ঢাকার ভিতরে — ৳৮০
+            </option>
+
+            <option value="100">
+                ঢাকার সাব-এরিয়া — ৳১০০
+            </option>
+
+            <option value="130">
+                ঢাকার বাইরে — ৳১৩০
+            </option>
+
+        </select>
+
+        <label>ডেলিভারি ঠিকানা</label>
+
+        <input type="text" id="address"
+               placeholder="সম্পূর্ণ ঠিকানা লিখুন">
+
+        <div class="order-summary">
+
+            <div>
+                পণ্যের দাম:
+                ৳<span id="productTotal">0</span>
+            </div>
+
+            <div>
+                ডেলিভারি:
+                ৳<span id="deliveryTotal">80</span>
+            </div>
+
+            <div class="total">
+                মোট:
+                ৳<span id="grandTotal">80</span>
+            </div>
+
         </div>
 
-        <div class="category">
-            <div class="icon">🌟</div>
-            <h3>শিশুবান্ধব পণ্য</h3>
-        </div>
-
-        <div class="category">
-            <div class="icon">📦</div>
-            <h3>সারা দেশে ডেলিভারি</h3>
-        </div>
-
-        <div class="category">
-            <div class="icon">😊</div>
-            <h3>Happy Shopping</h3>
-        </div>
+        <button class="whatsapp-btn"
+                onclick="sendOrder()">
+            📱 WhatsApp-এ অর্ডার পাঠান
+        </button>
 
     </div>
 
-</section>
-
+</div>
 
 <footer>
 
@@ -723,18 +653,123 @@ footer p {
         শিশুদের জন্য বই, শেখা ও আনন্দের জগৎ।
     </p>
 
-    <div class="social">
-
-        <a href="#">Facebook</a> |
-        <a href="#">Messenger</a>
-
-    </div>
-
     <p style="margin-top:18px;">
         © 2026 Kutumutu. All Rights Reserved.
     </p>
 
 </footer>
+
+<script>
+
+/* Kutumutu WhatsApp Number */
+const whatsappNumber = "8801754901527";
+
+let selectedProduct = "";
+let selectedPrice = 0;
+
+function openOrder(product, price) {
+
+    selectedProduct = product;
+    selectedPrice = price;
+
+    document.getElementById("productName").value = product;
+    document.getElementById("quantity").value = 1;
+    document.getElementById("orderBox").style.display = "block";
+
+    calculateTotal();
+}
+
+function closeOrder() {
+
+    document.getElementById("orderBox").style.display = "none";
+}
+
+function calculateTotal() {
+
+    let quantity =
+        Number(document.getElementById("quantity").value) || 1;
+
+    let delivery =
+        Number(document.getElementById("deliveryArea").value);
+
+    let productTotal = selectedPrice * quantity;
+
+    let grandTotal = productTotal + delivery;
+
+    document.getElementById("productTotal").innerText =
+        productTotal;
+
+    document.getElementById("deliveryTotal").innerText =
+        delivery;
+
+    document.getElementById("grandTotal").innerText =
+        grandTotal;
+}
+
+function sendOrder() {
+
+    let name =
+        document.getElementById("customerName").value.trim();
+
+    let phone =
+        document.getElementById("phone").value.trim();
+
+    let address =
+        document.getElementById("address").value.trim();
+
+    let quantity =
+        document.getElementById("quantity").value;
+
+    let deliverySelect =
+        document.getElementById("deliveryArea");
+
+    let deliveryArea =
+        deliverySelect.options[
+            deliverySelect.selectedIndex
+        ].text;
+
+    let productTotal =
+        document.getElementById("productTotal").innerText;
+
+    let grandTotal =
+        document.getElementById("grandTotal").innerText;
+
+    if (!name || !phone || !address) {
+
+        alert("দয়া করে নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।");
+
+        return;
+    }
+
+    let message =
+        "🛍️ *কুটুমুটু অর্ডার*%0A%0A" +
+
+        "📚 পণ্য: " + selectedProduct + "%0A" +
+
+        "🔢 পরিমাণ: " + quantity + "%0A" +
+
+        "💰 পণ্যের দাম: ৳" + productTotal + "%0A" +
+
+        "🚚 ডেলিভারি: " + deliveryArea + "%0A" +
+
+        "💵 মোট: ৳" + grandTotal + "%0A%0A" +
+
+        "👤 নাম: " + name + "%0A" +
+
+        "📱 মোবাইল: " + phone + "%0A" +
+
+        "📍 ঠিকানা: " + address;
+
+    let url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+    window.open(url, "_blank");
+}
+
+</script>
 
 </body>
 </html>
