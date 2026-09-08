@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kutumutu - কুটুমুটু | Kids Books & Toys</title>
+<title>Kutumutu - কুটুমুটু | Kids Books & Stationery</title>
 
 <style>
 * {
@@ -137,12 +137,12 @@ header {
 }
 
 .product-img {
-    height: 160px;
+    height: 180px;
     background: #f7eaf0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 55px;
+    font-size: 60px;
 }
 
 .product-info {
@@ -152,11 +152,19 @@ header {
 .product h3 {
     font-size: 16px;
     margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.details {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 8px;
 }
 
 .price {
     color: #e64f89;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
 }
 
@@ -166,10 +174,11 @@ header {
     background: #e85b91;
     color: white;
     text-align: center;
-    padding: 9px;
+    padding: 10px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .offer {
@@ -188,6 +197,30 @@ header {
 .offer p {
     color: #555;
     line-height: 1.6;
+}
+
+.delivery {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.delivery-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.delivery-item:last-child {
+    border-bottom: none;
+}
+
+.delivery-price {
+    color: #e64f89;
+    font-weight: bold;
 }
 
 footer {
@@ -243,12 +276,14 @@ footer p {
 <body>
 
 <header>
+
     <div class="logo">
         কুটুমুটু
         <span>Kutumutu</span>
     </div>
 
     <div class="menu">☰</div>
+
 </header>
 
 
@@ -260,7 +295,7 @@ footer p {
 
     <p>
         শিশুদের জন্য সুন্দর, শিক্ষামূলক ও আনন্দদায়ক
-        বই এবং খেলনার একটি ভালোবাসার জায়গা।
+        বই এবং স্টেশনারির একটি ভালোবাসার জায়গা।
     </p>
 
     <a href="#products" class="btn">
@@ -280,22 +315,22 @@ footer p {
 
         <div class="category">
             <div class="icon">📚</div>
-            <h3>Story Books</h3>
+            <h3>বই</h3>
+        </div>
+
+        <div class="category">
+            <div class="icon">✍️</div>
+            <h3>Learning</h3>
         </div>
 
         <div class="category">
             <div class="icon">🎨</div>
-            <h3>Activity Books</h3>
+            <h3>Activity</h3>
         </div>
 
         <div class="category">
-            <div class="icon">🕌</div>
-            <h3>Islamic Books</h3>
-        </div>
-
-        <div class="category">
-            <div class="icon">🧸</div>
-            <h3>Toys</h3>
+            <div class="icon">✏️</div>
+            <h3>Stationery</h3>
         </div>
 
     </div>
@@ -309,7 +344,7 @@ footer p {
 
     <p>
         আপনার ছোট্ট সোনামণির জন্য পছন্দের
-        বই ও খেলনা কিনুন কুটুমুটু থেকে।
+        বই ও স্টেশনারি কিনুন কুটুমুটু থেকে।
     </p>
 
 </section>
@@ -318,23 +353,30 @@ footer p {
 <section class="section" id="products">
 
     <h2 class="section-title">
-        জনপ্রিয় পণ্য
+        আমাদের পণ্য
     </h2>
 
     <div class="products">
 
+
+        <!-- Product 1 -->
+
         <div class="product">
 
             <div class="product-img">
-                📖
+                📚
             </div>
 
             <div class="product-info">
 
-                <h3>Kids Story Book</h3>
+                <h3>কচিকাঁচার গপ্পো</h3>
+
+                <div class="details">
+                    ১০ পিসের সেট
+                </div>
 
                 <div class="price">
-                    ৳250
+                    ৳৭৯০
                 </div>
 
                 <a href="#" class="order-btn">
@@ -346,18 +388,24 @@ footer p {
         </div>
 
 
+        <!-- Product 2 -->
+
         <div class="product">
 
             <div class="product-img">
-                🎨
+                ✍️
             </div>
 
             <div class="product-info">
 
-                <h3>Activity Book</h3>
+                <h3>Magic Handwriting Set</h3>
+
+                <div class="details">
+                    ৬ পিস
+                </div>
 
                 <div class="price">
-                    ৳180
+                    ৳৬৪০
                 </div>
 
                 <a href="#" class="order-btn">
@@ -369,18 +417,24 @@ footer p {
         </div>
 
 
+        <!-- Product 3 -->
+
         <div class="product">
 
             <div class="product-img">
-                🕌
+                🧠
             </div>
 
             <div class="product-info">
 
-                <h3>Islamic Story Book</h3>
+                <h3>জ্ঞানবক্স</h3>
+
+                <div class="details">
+                    ১২ পিসের সেট
+                </div>
 
                 <div class="price">
-                    ৳220
+                    ৳৫৯০
                 </div>
 
                 <a href="#" class="order-btn">
@@ -392,18 +446,24 @@ footer p {
         </div>
 
 
+        <!-- Product 4 -->
+
         <div class="product">
 
             <div class="product-img">
-                🧸
+                🔤
             </div>
 
             <div class="product-info">
 
-                <h3>Educational Toy</h3>
+                <h3>Words with Pictures</h3>
+
+                <div class="details">
+                    ৩০০+
+                </div>
 
                 <div class="price">
-                    ৳350
+                    ৳১৪০
                 </div>
 
                 <a href="#" class="order-btn">
@@ -412,6 +472,209 @@ footer p {
 
             </div>
 
+        </div>
+
+
+        <!-- Product 5 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                🧽
+            </div>
+
+            <div class="product-info">
+
+                <h3>Cute Eraser Set</h3>
+
+                <div class="details">
+                    ৪ পিস
+                </div>
+
+                <div class="price">
+                    ৳৮৫
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 6 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                🧽
+            </div>
+
+            <div class="product-info">
+
+                <h3>Cute Eraser Set</h3>
+
+                <div class="details">
+                    ৬ পিস
+                </div>
+
+                <div class="price">
+                    ৳৯০
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 7 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                ✏️
+            </div>
+
+            <div class="product-info">
+
+                <h3>Car-Shaped Sharpener</h3>
+
+                <div class="details">
+                    ১ পিস
+                </div>
+
+                <div class="price">
+                    ৳৯৯
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 8 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                ✂️
+            </div>
+
+            <div class="product-info">
+
+                <h3>Kids Safety Scissors</h3>
+
+                <div class="details">
+                    ১ পিস
+                </div>
+
+                <div class="price">
+                    ৳১৫০
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 9 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                🖍️
+            </div>
+
+            <div class="product-info">
+
+                <h3>Erasable Highlighter Set</h3>
+
+                <div class="details">
+                    ৬ পিস
+                </div>
+
+                <div class="price">
+                    ৳১৯০
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 10 -->
+
+        <div class="product">
+
+            <div class="product-img">
+                🔤
+            </div>
+
+            <div class="product-info">
+
+                <h3>Alphabet & Number Stickers</h3>
+
+                <div class="details">
+                    ১ পিস
+                </div>
+
+                <div class="price">
+                    ৳৩৫
+                </div>
+
+                <a href="#" class="order-btn">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        🚚 ডেলিভারি চার্জ
+    </h2>
+
+    <div class="delivery">
+
+        <div class="delivery-item">
+            <span>ঢাকার ভিতরে</span>
+            <span class="delivery-price">৳৮০</span>
+        </div>
+
+        <div class="delivery-item">
+            <span>ঢাকার সাব-এরিয়া</span>
+            <span class="delivery-price">৳১০০</span>
+        </div>
+
+        <div class="delivery-item">
+            <span>ঢাকার বাইরে</span>
+            <span class="delivery-price">৳১৩০</span>
         </div>
 
     </div>
@@ -457,7 +720,7 @@ footer p {
     <h2>কুটুমুটু</h2>
 
     <p>
-        শিশুদের জন্য বই, খেলনা ও আনন্দের জগৎ।
+        শিশুদের জন্য বই, শেখা ও আনন্দের জগৎ।
     </p>
 
     <div class="social">
